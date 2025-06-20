@@ -1,0 +1,367 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	font-family: 'Noto Sans', sans-serif;
+	background: #f5f5f5;
+}
+
+.wrapper::before {
+	content: '';
+	position: absolute;
+	min-width: 402px;
+	width: 100%;
+	height: 100%;
+	min-height: 874px;
+	background-color: rgba(255, 255, 255, 0.4); /* 반투명 흰색 */
+	z-index: 0;
+}
+
+.wrapper>* {
+	position: relative;
+	z-index: 1;
+}
+
+.wrapper {
+	min-width: 402px;
+	width: 100%;
+	height: 874px;
+	margin: 0 auto;
+	background-image: url('../images/IMG_4331.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 10px 20px;
+	height: 60px;
+}
+
+.writingbtn {
+	padding: 5px 14px;
+	font-size: 14px;
+	background-color: rgba(137, 105, 74, 0.6);
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.writingbtn:hover {
+	background-color: rgba(137, 105, 74, 0.85);
+}
+
+main {
+	flex-flow: 1;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 20xp 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.card-slider-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	padding: 0 40px;
+}
+
+.card-slider-container {
+	flex: 1;
+	overflow: hidden;
+	position: relative;
+}
+
+.card-track {
+	display: flex;
+	transition: transform 0.5s ease;
+	gap: 20px;
+}
+
+.arrow {
+	background: none;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.arrow.left {
+	left: 30%;
+}
+
+.arrow.right {
+	right: 30%;
+}
+
+.arrow img {
+	width: 20px;
+	height: 20px;
+	opacity: 1
+}
+
+.arrow img:hover {
+	opacity: 0.8;
+}
+
+.card {
+	flex: 0 0 200px;
+	opacity: 0.5;
+	transform: scale(0.8);
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	background: rgba(137, 105, 74, 0.8);
+	border-radius: 12px;
+	padding: 20px;
+	color: white;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card.active {
+	flex: 0 0 260px;
+	opacity: 1;
+	transform: scale(1);
+	z-index: 10;
+}
+
+.card img {
+	width: 100%;
+	border-radius: 12px;
+	margin-bottom: 12px;
+}
+
+.card h1 {
+	margin: 0 0 10px 0;
+	font-size: 1.4rem;
+}
+
+.card p {
+	margin: 4px 0;
+	font-size: 0.85rem;
+	opacity: 0.7;
+}
+
+footer {
+	background-color: trasparent;
+	padding: 20px;
+	text-align: center;
+}
+
+.search-box {
+	max-width: 320px;
+	margin: 0 auto 10px auto;
+}
+
+.table {
+	padding: 0 40px;
+}
+
+.search-box input[type="search"] {
+	width: 100%;
+	padding: 10px 40px 10px 16px;
+	border-radius: 20px;
+	border: none;
+	font-size: 1rem;
+	box-sizing: border-box;
+	border: none;
+	background-image: url('../images/search.png');
+	background-repeat: no-repeat;
+	background-position: right 15px center;
+	background-size: 20px 20px;
+}
+
+.search-box input[type="search"]:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.search-box input[type="search"]::placeholder {
+	font-size: 14px;
+}
+
+@media ( max-width : 403px) {
+	/* ✅ wrapper 배경 및 사이즈 조정 */
+	.wrapper {
+		width: 100vw; /* 70% → 100%로 변경 */
+		padding: 0 10px; /* 패딩 줄이기 */
+		transform: scale(0.9);
+		transform-origin: center;
+	}
+	.wrapper::before {
+		width: 100vw;
+		height: 100vh;
+		min-width: auto;
+	}
+
+	/* ✅ 헤더 패딩 조정 */
+	.header {
+		padding: 30px 40px;
+		height: 100%;
+		padding: 30px 40px;
+	}
+
+	/* ✅ 작성 버튼 축소 */
+	.writingbtn {
+		padding: 4px 10px;
+		font-size: 12px;
+		border-radius: 6px;
+	}
+
+	/* ✅ 메인 콘텐츠 여백 축소 */
+	main {
+		height: 100%;
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	/* ✅ 슬라이더 wrapper 축소 및 전체 비율 축소 */
+	.card-slider-wrapper {
+		position: relative;
+		width: 100%;
+		padding: 0 30px;
+		transform: scale(0.8);
+		transform-origin: center;
+	}
+	.card-slider-container {
+		padding: 0 10px;
+	}
+	/* ✅ 카드 간격 및 사이즈 축소 */
+	.card-track {
+		align-items: center;
+		gap: 10px;
+	}
+	.card {
+		flex: 0 0 100px;
+		padding: 10px;
+		font-size: 0.75rem;
+	}
+	.card.active {
+		flex: 0 0 100px;
+	}
+	.card img {
+		height: 130px;
+		object-fit: cover;
+		margin-bottom: 8px;
+	}
+	.card h1 {
+		font-size: 0.6rem;
+		margin-bottom: 6px;
+	}
+	.card p {
+		font-size: 0.5rem;
+	}
+
+	/* ✅ 화살표 위치 조정 */
+	.arrow.left, .arrow.right {
+		width: 30px;
+		height: 30px;
+	}
+	.arrow img {
+		width: 13px;
+		height: 13px;
+	}
+
+	/* ✅ 검색창 전체 폭 활용 */
+	.search-box {
+		max-width: 50%;
+		padding: 0 8px;
+	}
+	.search-box input[type="search"] {
+		font-size: 0.9rem;
+		padding: 3px 36px 3px 12px;
+		background-size: 10px 10px;
+		background-position: right 10px center;
+	}
+	.search-box input[type="search"]::placeholder {
+		font-size: 10px;
+	}
+	/* ✅ 푸터 여백 조정 */
+	footer {
+		padding: 50px;
+		font-size: 0.75rem;
+		height: 100%;
+	}
+}
+
+/* table 전체가 너무 좁으면 사진 잘림 가능하니 최소 너비 설정 */
+.table {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 20px 0;
+}
+
+.table table {
+	border-collapse: separate;
+	border-spacing: 0;
+	background-color: #89694A;
+	border-radius: 12px;
+	overflow: hidden; /* 테두리 둥글게 보이도록 */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.table th, .table td {
+	border: 1px solid #fff;
+	padding: 10px;
+	text-align: left;
+}
+
+.table th {
+	background-color: #89694A;
+	font-weight: bold;
+	color: white;
+}
+
+.table tr:first-child th {
+	text-align: center;
+	font-size: 1.3em;
+	background-color: #89694A;
+	color: white;
+}
+
+.save-btn {
+	padding: 10px 24px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #89694A; /* 브라운톤 */
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.save-btn:hover {
+	background-color: #6e5439;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.save-btn:active {
+	transform: translateY(1px);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
