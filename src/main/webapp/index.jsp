@@ -26,7 +26,7 @@
 		</footer>
 
 	</div>
-	<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+	<script src="${pageContext.request.contextPath}/js/home.js"></script>
 
 </body>
 </html>

@@ -10,12 +10,13 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="header"></div>
-		<main>
-			<div class="table">
-				<form id="saveForm" action="yourServletOrJsp" method="post"
-					enctype="multipart/form-data">
-					<table border="1" cellpadding="8" cellspacing="0">
+			<div class="save">
+				<form id="saveForm"
+					action="${pageContext.request.contextPath}/jsp/saveBook.jsp"
+					method="post" enctype="multipart/form-data">
+
+
+					<table class="saveform" border="1" cellpadding="8" cellspacing="0">
 						<tbody>
 							<tr>
 								<th colspan="2">독서기록 남기기</th>
@@ -40,14 +41,11 @@
 							</tr>
 						</tbody>
 					</table>
-					<div class="button-wrapper">
-						<button type="submit" class="save-btn">저장</button>
+					<div class="center-button">
+						<button class="plusbtn" type="submit" class="save-btn">저장</button>
 					</div>
 				</form>
 			</div>
-		</main>
-		<footer> </footer>
-
 	</div>
 	<script src="${pageContext.request.contextPath}/js/submit.js"></script>
 

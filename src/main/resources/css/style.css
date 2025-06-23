@@ -195,6 +195,59 @@ footer {
 	font-size: 14px;
 }
 
+.center-button, button-wrapper {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center; /* 수평 가운데 정렬 */
+	align-items: center; /* 수직 가운데 정렬 (필요시) */
+}
+
+.save {
+	border: 1px solid #89694A;
+	border-radius: 20px;
+	margin: 20px;
+	background-color: #89694A;
+}
+
+.plusbtn {
+	padding: 10px 24px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #89694A; /* 브라운톤 */
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.save {
+	border: 1px solid transparent;
+	border-radius: 20px;
+	margin: 20px auto;
+	background-color: transparent;
+
+	display: flex; /* ✅ flex 컨테이너 설정 */
+	justify-content: center; /* 수평 가운데 정렬 */
+	align-items: center;     /* 수직 가운데 정렬 */
+	padding: 10px 24px;      /* 버튼 내부 여백 */
+}
+
+.saveform {
+	color: white;
+	border: 1px solid white;
+	
+}
+
+.title {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #89694A;
+}
+
 @media ( max-width : 403px) {
 	/* ✅ wrapper 배경 및 사이즈 조정 */
 	.wrapper {
@@ -300,42 +353,6 @@ footer {
 }
 
 /* table 전체가 너무 좁으면 사진 잘림 가능하니 최소 너비 설정 */
-.table {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: 20px 0;
-}
-
-.table table {
-	border-collapse: separate;
-	border-spacing: 0;
-	background-color: #89694A;
-	border-radius: 12px;
-	overflow: hidden; /* 테두리 둥글게 보이도록 */
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.table th, .table td {
-	border: 1px solid #fff;
-	padding: 10px;
-	text-align: left;
-}
-
-.table th {
-	background-color: #89694A;
-	font-weight: bold;
-	color: white;
-}
-
-.table tr:first-child th {
-	text-align: center;
-	font-size: 1.3em;
-	background-color: #89694A;
-	color: white;
-}
-
 .save-btn {
 	padding: 10px 24px;
 	font-size: 16px;
@@ -360,8 +377,47 @@ footer {
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.button-wrapper {
+.center-button {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center; /* 수평 가운데 정렬 */
+	align-items: center; /* 수직 가운데 정렬 (필요시) */
+}
+
+.plusbtn {
+	padding: 10px 24px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #89694A; /* 브라운톤 */
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.save {
+	border: 1px solid #89694A;
+	border-radius: 20px;
+	margin: 20px;
+	background-color: #89694A;
+	color: white;
+}
+
+.saveform {
+	margin-top: 20px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 20px;
+}
+
+.title {
 	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #89694A;
 }
